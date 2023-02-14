@@ -9,22 +9,45 @@ Resources:
       SecurityGroups:
         - !Ref HTTPSecurityGroup
       Tags:
+        - Key: git_org
+          Value: pvondemhagen
         - Key: git_last_modified_by
-          Value: pvondemhagen@yahoo.com
-        - Key: git_last_modified_at
-          Value: "2023-02-03 19:36:50"
+          Value: "pvondemhagen@yahoo.com"
         - Key: git_file
           Value: test-stack.yaml
         - Key: git_commit
           Value: b339f15c91d433b28f25a956692bf92cf26174b4
-        - Key: yor_trace
-          Value: 6028e7f8-d694-4b20-a6e6-564a9ea625a2
-        - Key: git_repo
-          Value: aws_cloud_formation_5
-        - Key: git_org
-          Value: pvondemhagen
         - Key: git_modifiers
           Value: pvondemhagen
+        - Key: peter_check
+          Value: aws_cloud_formation_5
+        - Key: git_repo
+          Value: aws_cloud_formation_5
+        - Key: git_last_modified_at
+          Value: 2023-02-03 19:36:50
+        -
+          Key: yor_trace
+          Value: 6028e7f8-d694-4b20-a6e6-564a9ea625a2
+      Tenancy: default
+      SubnetId: subnet-098f346b7aab3e18c
+      EbsOptimized: False
+      SecurityGroupIds:
+        -
+          Ref: EC2SecurityGroup4
+      SourceDestCheck: True
+      BlockDeviceMappings:
+        -
+          DeviceName: /dev/xvda
+          Ebs:
+            Encrypted: False
+            VolumeSize: 8
+            SnapshotId: snap-09929113cb22f4007
+            VolumeType: gp2
+            DeleteOnTermination: True
+      HibernationOptions:
+        Configured: False
+      EnclaveOptions:
+        Enabled: False
   HTTPSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
