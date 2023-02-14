@@ -48,8 +48,6 @@ Resources:
         Configured: False
       EnclaveOptions:
         Enabled: False
-
-
   HTTPSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
