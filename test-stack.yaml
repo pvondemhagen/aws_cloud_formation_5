@@ -8,7 +8,23 @@ Resources:
       InstanceType: t2.micro
       SecurityGroups:
         - !Ref HTTPSecurityGroup
-
+      Tags:
+        - Key: git_commit
+          Value: d71acd7da66237599cfaeb03d2956df283aafb40
+        - Key: yor_trace
+          Value: 224e5c03-5c04-41af-9bf5-1bb735bfa72a
+        - Key: git_repo
+          Value: aws_cloud_formation_5
+        - Key: git_org
+          Value: pvondemhagen
+        - Key: git_modifiers
+          Value: pvondemhagen
+        - Key: git_last_modified_by
+          Value: pvondemhagen@yahoo.com
+        - Key: git_last_modified_at
+          Value: "2023-02-16 01:21:17"
+        - Key: git_file
+          Value: test-stack.yaml
   HTTPSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -22,3 +38,20 @@ Resources:
         FromPort: 443
         IpProtocol: tcp
         ToPort: 443
+      Tags:
+        - Key: git_org
+          Value: pvondemhagen
+        - Key: git_modifiers
+          Value: pvondemhagen
+        - Key: git_last_modified_by
+          Value: pvondemhagen@yahoo.com
+        - Key: git_last_modified_at
+          Value: "2023-02-16 01:21:17"
+        - Key: git_file
+          Value: test-stack.yaml
+        - Key: git_commit
+          Value: d71acd7da66237599cfaeb03d2956df283aafb40
+        - Key: yor_trace
+          Value: 90ce8e4e-5674-4dde-ba64-7723494ee480
+        - Key: git_repo
+          Value: aws_cloud_formation_5
